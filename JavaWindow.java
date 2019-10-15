@@ -60,7 +60,7 @@ public class JavaWindow {
                  Sm64_Randomizer.randomizer(fh, redCoin.isSelected(), starSpawn.isSelected(), openingCutscene.isSelected(), marioColor.isSelected(), enemyType.isSelected(), starColor.isSelected(), marioSpawn.isSelected(), warps.isSelected());
                   } catch(IOException x) {
                }
-            JOptionPane.showMessageDialog(frame.getComponent(0), "Successfully Randomized. Close this program and your file will be named: SM64 Random.ext.z64 Information is located at: SM64 Randomizer Info.txt");
+            JOptionPane.showMessageDialog(frame.getComponent(0), "Successfully Randomized. Your file will be named: SM64 Random.ext.z64 Information is located at: SM64 Randomizer Info.txt");
             }
         });
         JPanel panel = new JPanel();
