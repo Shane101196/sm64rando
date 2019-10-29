@@ -29,6 +29,7 @@ public class JavaWindow {
         JCheckBox enemyType = new JCheckBox("Enemy Types Randomized");
         JCheckBox starColor = new JCheckBox("Star Select Background Randomized");
         JCheckBox warps = new JCheckBox("Warps Randomized");
+        
         buttonInput.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                getValue = preSeed.getText();
@@ -36,16 +37,15 @@ public class JavaWindow {
         });
         
         buttonFile.addActionListener(new ActionListener() {
-          public void actionPerformed(ActionEvent e) {
-            final JFileChooser fc = new JFileChooser();
-            fc.showOpenDialog(frame);
-
-            try {
-             Scanner reader = new Scanner(fc.getSelectedFile());
-             fh = fc.getSelectedFile();
-             filePath.setText(fh.getPath());
-            } catch (Exception z){}
-            }
+            public void actionPerformed(ActionEvent e) {
+                final JFileChooser fc = new JFileChooser();
+                fc.showOpenDialog(frame);
+                try {
+                    Scanner reader = new Scanner(fc.getSelectedFile());
+                    fh = fc.getSelectedFile();
+                    filePath.setText(fh.getPath());
+                } catch (Exception z){}
+           }
         });
         buttonNew.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -63,6 +63,7 @@ public class JavaWindow {
             JOptionPane.showMessageDialog(frame.getComponent(0), "Successfully Randomized. Your file will be named: SM64 Random.ext.z64 Information is located at: SM64 Randomizer Info.txt");
             }
         });
+        
         JPanel panel = new JPanel();
         panel.add(buttonFile);
         panel.add(filePath);
